@@ -1,0 +1,89 @@
+/* App.css */
+
+/* 1. Global Reset & Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #0f0f0f; /* Dark YouTube-like background */
+  color: #ffffff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* 2. Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ff0000, #ff7300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* 3. Input & Button Container */
+input {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: 2px solid #333;
+  border-radius: 30px;
+  background: #1e1e1e;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+input:focus {
+  border-color: #ff0000;
+}
+
+button {
+  padding: 12px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* 4. Responsive Video Grid */
+.video {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+/* 5. Video Styling (making iframes responsive) */
+.video iframe {
+  width: 100%; /* Overrides the 1521px in your JSX */
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: #000;
+}
